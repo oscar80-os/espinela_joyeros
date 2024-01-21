@@ -376,9 +376,12 @@ nav a{
     /* SECCION RESPONSIVE */
     @media screen and (max-width: 850px) {
         .contenedor {
+          position: absolute;
+          top: 46rem;
           display: block;
         }
         .contenedor-items{
+            
             width: 100% !important;
         }
         .carrito{
