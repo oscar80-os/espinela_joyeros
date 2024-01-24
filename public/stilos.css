@@ -7,12 +7,11 @@
 
 body {
     background-color: #f5f1f1;
-    
     height: 100vh;
-    
     align-items: center;
     justify-content: center;
-    
+    min-height: 100vh;
+    width: 100%;
 }
 
 .logo {
@@ -25,8 +24,8 @@ body {
 nav {
     position: relative;
     top: 15rem;
-    left: 12rem;
-    width: 70%;
+    left: 8rem;
+    width: 80%;
     height: 50px;
     background: #2b0303;
     border-radius: 8px;
@@ -58,7 +57,7 @@ nav span {
 }
 
 nav a:nth-child(1):hover~span{
-    left: 0;
+    left: 0;  
 }
 nav a:nth-child(2):hover~span{
     left: 125px;
@@ -80,6 +79,9 @@ nav a:nth-child(7):hover~span{
 }
 nav a:nth-child(8):hover~span{
     left: 770px;
+}
+nav a:nth-child(9):hover~span{
+    left: 870px;
 }
 
 /*nav {
@@ -156,6 +158,43 @@ nav a{
         transform: translateY(-50px) scale(1.2);
     }
 
+    /*estilos slider2*/
+    .slider2 {
+        position: relative;
+        top: 21rem;
+        left: 12rem;
+        width: 880px;
+        height: 300px; 
+    }
+
+   
+
+    .slider2 span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+       
+    }
+
+    .slider2 span img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: 2s;
+    }
+
+    .slider2 span:hover img {
+        transform: scale(1.2);
+    }
+
+
      /* Estilos de la barra de búsqueda */
      .buscar {
         position: absolute;
@@ -196,7 +235,7 @@ nav a{
      /*card*/
      .contenedor{
         position:relative;
-        top: 35rem;
+        top: 30rem;
         max-width: 1200px;
         padding: 10px;
         margin: auto;
@@ -372,12 +411,89 @@ nav a{
     .carrito-total .btn-pagar:hover{
         scale: 1.05;
     }
-    
+
+    /*Social media*/
+
+    .wrapper{
+        position: absolute;
+        top: 10rem;
+        left: 8rem;
+    }
+    .wrapper .button{
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        /* float: left; */
+        margin: 0 5px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:hover{
+        width: 200px;
+      }
+      .wrapper .button .icon{
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        border-radius: 50px;
+        box-sizing: border-box;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:nth-child(1):hover .icon{
+        background: #4267B2;
+        color: #f3f3f3;
+      }
+      .wrapper .button:nth-child(2):hover .icon{
+        background: linear-gradient(30deg, #3040e6 10%, #d41356, #e74f31, #f0ce6c);
+        color: #f3f3f3;
+      }
+      .wrapper .button:nth-child(3):hover .icon{
+        background: #ff0000;
+        color: #f3f3f3;
+      }
+      
+      .wrapper .button .icon i{
+        font-size: 25px;
+        line-height: 60px;
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:hover .icon i{
+        color: #fff;
+      }
+      .wrapper .button span{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-left: 10px;
+        transition: all 0.3s ease-out;
+      }
+      .wrapper .button:nth-child(1) span{
+        
+        color: #0e0d0d;
+      }
+      .wrapper .button:nth-child(2) span{
+        color: #0e0d0d;
+      }
+      .wrapper .button:nth-child(3) span{
+        
+        color: #0e0d0d;
+      }
+
+
+
+
+
     /* SECCION RESPONSIVE */
     @media screen and (max-width: 850px) {
         .contenedor {
           position: absolute;
-          top: 46rem;
+          top: 42rem;
           display: block;
         }
         .contenedor-items{
@@ -397,6 +513,13 @@ nav a{
             position: absolute;
             top: 30rem;
             left:unset;
+            
+        }
+        .slider2{
+            position: absolute;
+            top: 23rem;
+            left: 1rem;
+            width: 90%;
             
         }
         
@@ -425,5 +548,13 @@ nav a{
             color: #620808;
             cursor: pointer;
          }
+         /*redes sociales*/
+         .wrapper{
+            position: absolute;
+            top: 20rem;
+            left: 1rem;
+        }
       }
+
+      
     
